@@ -26,8 +26,8 @@ void dequeue()
 	}
 	else
 	{
-		printf("%d %d",front,rear);
 		printf("the item removed is %d\n",q[front]);
+		q[front]=0;
 		front+=1;
 	}
 }
@@ -38,6 +38,25 @@ void display()
 	{
 		printf("%d\n",q[i]);
 	}
+	/*if(front<rear){
+		for(int i=front;i<maxsize;i++)
+	        {
+		printf("%d\n",q[i]);
+	        }
+	}else{
+	        for(int i=front;i<maxsize;i++)
+	        {
+		printf("%d\n",q[i]);
+	        }
+		for(int i=0;i<rear;i++)
+	        {
+		printf("%d\n",q[i]);
+	        }
+	        for(int i=rear;i<front;i++)
+	        {
+		printf("%d\n",q[i]);
+	        }
+	}*/
 	
 }
 int main()
@@ -46,7 +65,7 @@ int main()
 	do
 	{
 		printf("-------------------MENU----------------\n");
-		printf("1.enqueue\n2.dequeue\n3.display\n");
+		printf("1.enqueue\n2.dequeue\n3.display\n4.Exit\n");
 		printf("enter your choice");
 		scanf("%d",&choice);
 		switch(choice)
